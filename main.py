@@ -1,6 +1,7 @@
 import discord
 import os
 from dotenv import load_dotenv
+from discord.ext import commands
 
 load_dotenv()
 
@@ -28,6 +29,8 @@ async def on_message(message):
         return
     else:
         if message.content == 'hello':
-            await message.channel.send("Hii")
+            await message.channel.send("Hii, I'm a raccoon")
+
+
 
 bot.run(DISCORD_TOKEN)
