@@ -4,6 +4,8 @@ from discord.ext import commands
 import os
 from dotenv import load_dotenv
 from discord.ext import commands
+from addRemainder import add
+
 
 load_dotenv()
 
@@ -17,6 +19,9 @@ bot = discord.Client(intents=intents)
 tree = app_commands.CommandTree(bot)
 
 
+remlist =[]
+
+
 @bot.event
 async def on_ready():
     await tree.sync()
@@ -28,6 +33,11 @@ async def on_ready():
 async def first_command(interaction):
     await interaction.response.send_message(f"Hello! {interaction.user.mention}")
 
+
+@tree.command(name = "add" description = "adds task")
+async def addtolist(interaction){
+    await add(interaction.)
+}
 
 # bot = commands.Bot(command_prefix = '!', intents= intents)
 
