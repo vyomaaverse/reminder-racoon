@@ -28,8 +28,8 @@ async def on_message(message):
     if message.author == bot.user:
         return
     else:
-        if message.content == 'hello':
-            await message.channel.send("Hii, I'm a raccoon")
+        if message.content == 'who is nishtha?':
+            await message.channel.send("Nishtha is gandi bacchi")
 
 
 
