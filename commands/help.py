@@ -34,10 +34,9 @@ async def first_command(interaction):
     await interaction.response.send_message(f"Hello! {interaction.user.mention}")
 
 
-@tree.command(name = "add" description = "adds task")
-async def addtolist(interaction){
-    await add(interaction.)
-}
+@tree.command(name = "add", description = "adds task")
+async def addtolist(interaction):
+    await add(interaction)
 
 # bot = commands.Bot(command_prefix = '!', intents= intents)
 
